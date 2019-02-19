@@ -14,7 +14,7 @@
     <string name="username">Username</string>
     <string name="newuser">New User?</string>
     <string name="title_activity_blank">Sign in</string>
-    <!-- Strings related to login -->
+    <!-- Strings related to Login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
     <string name="action_sign_in">Sign in or register</string>
@@ -31,5 +31,14 @@
     <string name="welcome">WELCOME !!!</string>
     <string name="newbie">newbie</string>
     <string name="fname">First Name</string>
+
     <string name="lname">Last Name</string>
+    <string name="gender">Gender</string>
+    <string-array name="genders">
+        <item>Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Prefer not to answer</item>
+    </string-array>
+
 </resources>

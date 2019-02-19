@@ -2,7 +2,7 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
 
     <corners android:radius="10dp" />
-    <solid android:color="@color/wallet_highlighted_text_holo_light"/>
+    <solid android:color="#B1D7E7"/>
     <stroke android:width="5dp" android:color="@color/newblue"/>
 
 </shape>
