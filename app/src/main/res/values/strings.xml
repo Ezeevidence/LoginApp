@@ -13,7 +13,6 @@
     <string name="mach">MACH INFINITY</string>
     <string name="username">Username</string>
     <string name="newuser">New User?</string>
-    <string name="welcome">Welcome</string>
     <string name="title_activity_blank">Sign in</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -28,4 +27,9 @@
         completions."
     </string>
     <string name="SignUp">Sign Up</string>
+    <string name="address">Address</string>
+    <string name="welcome">WELCOME !!!</string>
+    <string name="newbie">newbie</string>
+    <string name="fname">First Name</string>
+    <string name="lname">Last Name</string>
 </resources>
