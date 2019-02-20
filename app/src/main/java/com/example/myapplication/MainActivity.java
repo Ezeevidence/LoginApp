@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
                 validate();
 
-                Toast.makeText(getApplicationContext(), "you just clicked a button. Loading ...", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), " Loading ...", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -52,5 +52,9 @@ public class MainActivity extends AppCompatActivity {
     private void validate() {
         firstname = etFirstname.getText().toString().trim();
         lastname = etLastname.getText().toString().trim();
+        email = etEmail.getText().toString().trim();
+        password = etPassword.getText().toString().trim();
+
+
     }
 }

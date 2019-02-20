@@ -13,7 +13,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        final Button button = (Button) findViewById(R.id.btnRegister);
+        Button button = (Button) findViewById(R.id.btnRegister);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
