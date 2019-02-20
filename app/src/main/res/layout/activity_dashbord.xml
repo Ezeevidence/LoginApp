@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,7 +12,8 @@
     android:layout_height="match_parent"
     tools:context=".Dashbord"
     android:background="@drawable/backdown"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingBottom="50dp">
 
 
 
@@ -25,6 +32,7 @@
             android:background="@drawable/bord2"
             android:paddingLeft="20dp"
             android:paddingTop="80dp"
+            android:paddingBottom="50dp"
             >
     <TextView
         android:id="@+id/tvName"
@@ -72,8 +80,16 @@
         android:layout_marginTop="40dp"
         />
         </LinearLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/add"
+        android:layout_gravity="center"
+        android:paddingTop="40dp"/>
 
 
 
 
 </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

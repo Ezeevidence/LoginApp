@@ -5,28 +5,32 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
-    private EditText etFirstname, etLastname, etAddress, etEmail;
-    private EditText etPhone, etPassword, etConfirmPassword;
-    private Spinner spGender;
-    private Button btnSignup;
-    private  String firstname, lastname, address, email, phone, password, gender, confirm, fullname;
-    private String message;
+public class MainActivity extends AppCompatActivity
+
+
+    {
+
+        private EditText etFirstname, etLastname, etAddress, etEmail;
+        private EditText etPhone, etPassword, etConfirmPassword;
+        private Spinner spGender;
+        private Button btnSignup;
+        private String firstname, lastname, address, email, phone, password, gender, confirm, fullname;
+        private String message;
 //    private EditText etLastname;
 
-    private Utils util;
+        private Utils util;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+        @Override
+        protected void onCreate (Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        etFirstname = (EditText) findViewById(R.id.etFirstname);
         etFirstname = findViewById(R.id.etFirstname);
         etLastname = findViewById(R.id.etLastname);
         etAddress = findViewById(R.id.etAddess);
@@ -37,6 +41,19 @@ public class MainActivity extends AppCompatActivity {
         spGender = findViewById(R.id.spGender);
         btnSignup = findViewById(R.id.btnSignup);
         util = new Utils();
+
+
+        spGender.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
 
 
@@ -54,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void validate() {
+        private void validate () {
         firstname = etFirstname.getText().toString().trim();
         lastname = etLastname.getText().toString().trim();
         address = etAddress.getText().toString().trim();
@@ -62,21 +79,21 @@ public class MainActivity extends AppCompatActivity {
         phone = etPhone.getText().toString().trim();
         password = etPassword.getText().toString().trim();
         confirm = etPassword.getText().toString().trim();
-//        gender = spGender.getSelectedItem().toString();
+            gender = spGender.getOnItemSelectedListener().toString();
 
 
         if (TextUtils.isEmpty(firstname)) {
-             message = "first name cannot be empty";
+            message = "first name cannot be empty";
             etFirstname.setError(message);
             return;
         }
         if (TextUtils.isEmpty(lastname)) {
-             message = "last name cannot be empty";
+            message = "last name cannot be empty";
             etLastname.setError(message);
             return;
         }
         if (!util.isValidEmail(getApplicationContext(), email)) {
-            message =  "email cannot be empty";
+            message = "email cannot be empty";
             etEmail.setError(message);
             return;
         }
@@ -98,18 +115,13 @@ public class MainActivity extends AppCompatActivity {
             etPassword.setError("password cannot be empty or less than 8");
             return;
         }
-        if (password != confirm) {
-            etConfirmPassword.setError("incorrect passowrd");
+        if (!password.matches(confirm)  ) {
+            etConfirmPassword.setError("passwords do not match");
         } else {
             startActivity(new Intent(MainActivity.this, Welcome.class));
             Toast.makeText(this, "Details entered correctly", Toast.LENGTH_SHORT).show();
         }
 
 
-
-
-
-
-
     }
-}
+    }

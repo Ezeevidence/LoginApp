@@ -57,7 +57,7 @@
     android:layout_gravity="center"
     android:gravity="center">
  <Button
-     android:id="@+id/signin"
+     android:id="@+id/btnSignin"
      android:layout_width="200dp"
      android:layout_height="wrap_content"
      android:text="@string/action_sign_in_short"

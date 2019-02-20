@@ -21,5 +21,14 @@ public class Login extends AppCompatActivity {
 
             }
         });
+
+        Button butt = (Button) findViewById(R.id.btnSignin);
+        butt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Login.this, Dashbord.class));
+
+            }
+        });
     }
 }

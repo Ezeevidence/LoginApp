@@ -33,6 +33,7 @@
     <string name="fname">First Name</string>
     <string name="lname">Last Name</string>
     <string name="gender">Gender</string>
+    <string name="already">....... Already Existing User .......</string>
     <string-array name="genders">
         <item> ... Select Gender ...</item>
         <item>Male</item>
