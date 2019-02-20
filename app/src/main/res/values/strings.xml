@@ -31,11 +31,10 @@
     <string name="welcome">WELCOME !!!</string>
     <string name="newbie">newbie</string>
     <string name="fname">First Name</string>
-
     <string name="lname">Last Name</string>
     <string name="gender">Gender</string>
     <string-array name="genders">
-        <item>Gender</item>
+        <item> ... Select Gender ...</item>
         <item>Male</item>
         <item>Female</item>
         <item>Prefer not to answer</item>
